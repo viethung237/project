@@ -138,3 +138,9 @@ class abe(ABEnc):
         return str(int.from_bytes(group.serialize(rec_msg), byteorder='big'))[:8]
     else:return None
 '''
+group = PairingGroup('SS512')
+a = group.random(G1)
+b = group.random(G1)
+c = group.random(G1)
+print(pair(a+b,c) == pair(a,c)*pair(b,c))
+
