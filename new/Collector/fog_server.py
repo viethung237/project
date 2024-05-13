@@ -22,9 +22,12 @@ def handle_client(conn, addr,server_pos):
             data = data.split("@")
             cmd = data[0]
 
-            if cmd == "Register":
+            if cmd == "Collector Register":
+                #recieve Di 
                 client_data = conn.recv(SIZE).decode(FORMAT)
-                'verify alorithm'
+                #store Di,MAC
+                #send A
+                
                 if 1 :
                     conn.send('serverdata'.encode(FORMAT))
                 else :
